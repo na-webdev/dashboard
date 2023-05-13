@@ -1,0 +1,32 @@
+<div *ngIf="userData" class="flex justify-between items-center h-16 pl-4 pr-2">
+  <img routerLink="/" alt="angular" src="./assets/icon.png" class="w-8" />
+  <div>
+    <button class="relative" mat-icon-button>
+      <mat-icon> notifications_none </mat-icon>
+      <app-badge
+        size="medium"
+        [content]="'' + userData.notifications.length"
+        className="top-2 right-2 bg-green-700"
+      ></app-badge>
+    </button>
+    <button class="relative" mat-icon-button>
+      <mat-icon> person </mat-icon>
+      <app-badge
+        *ngIf="userData.userSettingsNotification"
+        size="small"
+        className="bottom-[12px] right-[12px] bg-green-500"
+      ></app-badge>
+    </button>
+  </div>
+</div>
+<div class="p-4">
+  <img
+    class="rounded-[50%] w-[100px] m-auto"
+    [src]="userData.imageUrl"
+    [alt]="userData.username"
+  />
+  <div class="text-center my-2">
+    <div>{{ userData.username }}</div>
+    <div class="text-gray-400">{{ userData.email }}</div>
+  </div>
+</div>

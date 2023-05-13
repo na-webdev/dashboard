@@ -1,0 +1,71 @@
+<mat-sidenav-container class="absolute left-0 right-0 top-0 bottom-0">
+  <mat-sidenav
+    class="border-none bg-custom-primary-500 text-white w-72 overflow-hidden"
+    #leftSideNav
+    opened
+    mode="side"
+  >
+    <app-left-sidenav></app-left-sidenav>
+  </mat-sidenav>
+  <mat-sidenav
+    class="border-none shadow-md w-16"
+    opened
+    mode="side"
+    position="end"
+  >
+    <app-right-sidenav></app-right-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="flex justify-between bg-white shadow-sm">
+      <button
+        (click)="leftSideNav.toggle()"
+        mat-icon-button
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div>
+        <button
+          mat-icon-button
+          aria-label="Example icon-button with heart icon"
+        >
+          <mat-icon>view_sidebar</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          aria-label="Example icon-button with heart icon"
+        >
+          <mat-icon>search</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          aria-label="Example icon-button with share icon"
+        >
+          <mat-icon>zoom_out_map</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          aria-label="Example icon-button with share icon"
+        >
+          <mat-icon>bookmark_border</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          aria-label="Example icon-button with share icon"
+        >
+          <mat-icon>folder_open</mat-icon>
+          <app-badge
+            content="7"
+            size="medium"
+            className="text-white right-[4px] top-[10px] bg-custom-primary-400"
+          ></app-badge>
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <main class="p-8">
+      <h1>Brain</h1>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

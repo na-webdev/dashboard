@@ -1,0 +1,7 @@
+.nav-link-active {
+  @apply bg-gray-400 bg-opacity-20;
+}
+
+.nav-link-item {
+  @apply hover:bg-gray-400 hover:bg-opacity-20 hover:cursor-pointer my-1;
+}

@@ -1,0 +1,24 @@
+<div *ngIf="group" class="p-2">
+  <div>
+    <div class="pl-4">
+      <div class="text-custom-primary-400">{{ group.name | titlecase }}</div>
+      <span class="text-gray-400">{{ group.definition }}</span>
+    </div>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let linkData of group.navLinks"
+        [routerLink]="[linkData.link]"
+        [routerLinkActive]="'nav-link-active'"
+        matRipple
+        class="nav-link-item rounded-[10px]"
+      >
+        <mat-icon matListItemIcon class="text-white">{{
+          linkData.icon
+        }}</mat-icon>
+        <span matListItemTitle class="text-white">{{
+          linkData.title | titlecase
+        }}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

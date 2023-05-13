@@ -1,0 +1,20 @@
+mat-sidenav-content{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+mat-sidenav-content::-webkit-scrollbar {
+  display: none;
+}
+
+mat-sidenav::-webkit-scrollbar {
+  display: none
+}
+
+.mat-drawer-inner-container::-webkit-scrollbar {
+  display: none;
+}
+
+app-left-sidenav::-webkit-scrollbar {
+  display: none;
+}

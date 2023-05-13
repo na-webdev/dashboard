@@ -1,0 +1,11 @@
+.badge {
+  @apply absolute z-50 rounded-[50%] flex justify-center items-center;
+}
+
+.small-badge {
+  @apply h-[8px] w-[8px] text-[7px];
+}
+
+.medium-badge {
+  @apply h-[15px] w-[15px] text-[10px]
+}
