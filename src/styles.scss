@@ -6,5 +6,9 @@ mat-icon {
   @apply text-gray-400;
 }
 .mat-drawer-inner-container::-webkit-scrollbar {
-  display: none;
+  @apply hidden
+}
+
+.mat-mdc-tab-labels {
+  @apply border-black border-opacity-10 border-b-[1px]
 }

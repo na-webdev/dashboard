@@ -15,8 +15,10 @@
   >
     <app-right-sidenav></app-right-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar class="flex justify-between bg-white shadow-sm">
+  <mat-sidenav-content class="relative">
+    <mat-toolbar
+      class="sticky top-0 z-50 flex justify-between bg-white shadow-sm"
+    >
       <button
         (click)="leftSideNav.toggle()"
         mat-icon-button

@@ -11,6 +11,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { BadgeComponent } from '@shared/components';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { StatCardComponent } from './components/stat-card/stat-card.component';
 
 const materialComponentModules = [
   MatSidenavModule,
@@ -23,9 +27,12 @@ const materialComponentModules = [
   MatMenuModule,
   MatCardModule,
   MatExpansionModule,
+  MatTabsModule,
+  MatChipsModule,
+  MatButtonToggleModule,
 ];
 
-const uiComponents = [BadgeComponent];
+const uiComponents = [BadgeComponent, StatCardComponent];
 
 @NgModule({
   declarations: [...uiComponents],

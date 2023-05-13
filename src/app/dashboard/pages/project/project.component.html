@@ -1,1 +1,30 @@
-<p>project works!</p>
+<div class="bg-white">
+  <div class="max-w-[1400px] m-auto px-4">
+    <app-project-hero [userData]="userData"></app-project-hero>
+  </div>
+</div>
+<div class="bg-gray-100">
+  <div class="max-w-[1400px] m-auto p-4">
+    <mat-tab-group
+      animationDuration="0ms"
+      mat-stretch-tabs="false"
+      mat-align-tabs="start"
+    >
+      <mat-tab label="Home">
+        <app-statistic-boards></app-statistic-boards>
+      </mat-tab>
+      <mat-tab label="Budget">Content 2</mat-tab>
+      <mat-tab>
+        <ng-template class="relative" mat-tab-label>
+          Team
+          <app-badge
+            size="medium"
+            content="8"
+            className="bg-gray-400 relative ml-2 text-white"
+          ></app-badge>
+        </ng-template>
+        Content 3
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

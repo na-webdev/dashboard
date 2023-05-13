@@ -1,6 +1,6 @@
-import { NavigationGroupI } from '@dashboard/interfaces/navigation-group.interface';
+import { NavigationGroupI, UserDataI } from '@dashboard/interfaces';
 
-export const staticUiUserData = {
+export const staticUiUserData: UserDataI = {
   username: 'Nurmatov Abdurahim',
   email: 'abdurahim.nurmatov@gmail.com',
   notifications: ['', ''],
