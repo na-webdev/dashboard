@@ -7,6 +7,7 @@ import { RightSidenavComponent } from './components/right-sidenav/right-sidenav.
 import { LsHeroComponent } from './components/ls-hero/ls-hero.component';
 import { NavigationGroupListComponent } from './components/navigation-group-list/navigation-group-list.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ProjectComponent } from './pages/project/project.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     LsHeroComponent,
     NavigationGroupListComponent,
     NotFoundComponent,
+    ProjectComponent,
   ],
   imports: [DashboardRoutingModule, SharedModule],
 })

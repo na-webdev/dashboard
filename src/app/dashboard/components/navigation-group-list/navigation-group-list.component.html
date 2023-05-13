@@ -4,7 +4,7 @@
       <div class="text-custom-primary-400">{{ group.name | titlecase }}</div>
       <span class="text-gray-400">{{ group.definition }}</span>
     </div>
-    <mat-list>
+    <mat-nav-list>
       <mat-list-item
         *ngFor="let linkData of group.navLinks"
         [routerLink]="[linkData.link]"
@@ -18,7 +18,10 @@
         <span matListItemTitle class="text-white">{{
           linkData.title | titlecase
         }}</span>
+        <span matListItemMeta class="mt-2" *ngIf="linkData.nestedLinks">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </span>
       </mat-list-item>
-    </mat-list>
+    </mat-nav-list>
   </div>
 </div>

@@ -7,10 +7,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import { BadgeComponent } from './components/badge/badge.component';
+import { BadgeComponent } from '@shared/components';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 const materialComponentModules = [
