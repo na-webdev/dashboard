@@ -1,0 +1,36 @@
+<div class="py-4">
+  <div class="grid grid-cols-4">
+    <app-stat-card
+      title="summary"
+      statData="24"
+      statType="due tasks"
+      [footerContent]="'Completed: 24'"
+      mainTextClass="text-green-500"
+    ></app-stat-card>
+  </div>
+
+  <mat-card class="mt-4 rounded-2xl p-4">
+    <mat-card-header class="flex items-center justify-between p-0">
+      <mat-card-title>Github Issues Summary</mat-card-title>
+      <div class="flex items-center gap-1">
+        <div class="bg-gray-300 rounded-2xl py-1.5 px-4 hover:cursor-pointer">
+          Last Week
+        </div>
+        <div class="rounded-2xl py-1.5 px-4 hover:cursor-pointer">
+          This Week
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="grid xl:grid-cols-2 gap-4">
+      <img
+        src="https://assets-us-01.kc-usercontent.com/cddce937-cf5a-003a-bfad-78b8fc29ea3f/d339008c-bcfd-45bb-8292-d05899d536db/combination%20chart.png"
+        alt=""
+      />
+      <div>
+        <p>Overview</p>
+        ;
+        <div class="grid grid-cols-4 gap-4 justify-items-stretch"></div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

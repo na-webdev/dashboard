@@ -1,0 +1,19 @@
+<mat-card [class]="cardClass + ' p-5 rounded-2xl mat-elevation-z4'">
+  <mat-card-header *ngIf="title" class="flex items-center justify-between p-0">
+    <mat-card-title class="text-lg font-normal">{{
+      title | titlecase
+    }}</mat-card-title>
+    <button (click)="onMoreVertClick.emit('click')" mat-icon-button>
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="text-center">
+    <div [ngClass]="[mainTextClass, 'text-6xl']">{{ statData }}</div>
+    <span [ngClass]="[subTextClass, mainTextClass, 'text-xl']">{{
+      statType | titlecase
+    }}</span>
+  </mat-card-content>
+  <mat-card-footer *ngIf="footerContent" class="text-center mt-8">{{
+    footerContent
+  }}</mat-card-footer>
+</mat-card>
