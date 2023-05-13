@@ -1,10 +1,16 @@
 <div class="bg-white">
-  <div class="max-w-[1400px] m-auto px-4">
+  <div class="max-w-[1440px] m-auto px-6">
     <app-project-hero [userData]="userData"></app-project-hero>
   </div>
 </div>
-<div class="bg-gray-100">
-  <div class="max-w-[1400px] m-auto p-4">
+<div class="bg-gray-100 h-full">
+  <div class="max-w-[1440px] m-auto p-6 relative">
+    <div
+      class="absolute hover:cursor-pointer rounded-xl bg-gray-100 flex items-center p-2 px-3 left-[24px] top-[-30px]"
+    >
+      ACME Corp. Backend App
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
     <mat-tab-group
       animationDuration="0ms"
       mat-stretch-tabs="false"
@@ -19,8 +25,8 @@
           Team
           <app-badge
             size="medium"
-            content="8"
-            className="bg-gray-400 relative ml-2 text-white"
+            content="6"
+            className="bg-gray-500 relative ml-2 text-white"
           ></app-badge>
         </ng-template>
         Content 3

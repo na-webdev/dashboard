@@ -1,11 +1,11 @@
 <div class="py-4">
-  <div class="grid grid-cols-4">
+  <div class="grid xl:grid-cols-4 gap-4">
     <app-stat-card
-      title="summary"
-      statData="24"
-      statType="due tasks"
-      [footerContent]="'Completed: 24'"
-      mainTextClass="text-green-500"
+      *ngFor="let stat of staticCards"
+      [title]="stat.title"
+      [statData]="stat.number"
+      [statType]="stat.type"
+      [footerContent]="'Completed: ' + stat.completed"
     ></app-stat-card>
   </div>
 
@@ -28,8 +28,29 @@
       />
       <div>
         <p>Overview</p>
-        ;
-        <div class="grid grid-cols-4 gap-4 justify-items-stretch"></div>
+        <div class="grid grid-cols-4 gap-4">
+          <div
+            *ngFor="let card of staticCards2; let i = index"
+            [ngClass]="{
+              'bg-green-400 h-[200px]': i === 0,
+              'bg-pink-400 h-[200px]': i === 1,
+              'col-span-2': i === 0 || i === 1,
+              'bg-gray-300 h-[100px]': !(i === 0 || i === 1)
+            }"
+            class="rounded-lg flex flex-col items-center justify-center bg-opacity-50 text-center"
+          >
+            <span
+              [ngClass]="{
+                'text-3xl': true,
+                '!text-6xl': i === 0 || i === 1
+              }"
+              >{{ card.number }}</span
+            >
+            <span [ngClass]="{ 'text-lg': i === 0 || i === 1 }">{{
+              card.type | titlecase
+            }}</span>
+          </div>
+        </div>
       </div>
     </mat-card-content>
   </mat-card>
