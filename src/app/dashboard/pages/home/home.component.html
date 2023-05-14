@@ -16,55 +16,8 @@
     <app-right-sidenav></app-right-sidenav>
   </mat-sidenav>
   <mat-sidenav-content class="relative">
-    <mat-toolbar
-      class="sticky top-0 z-50 flex justify-between bg-white shadow-sm"
-    >
-      <button
-        (click)="leftSideNav.toggle()"
-        mat-icon-button
-        aria-label="Example icon-button with menu icon"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-      <div>
-        <button
-          mat-icon-button
-          aria-label="Example icon-button with heart icon"
-        >
-          <mat-icon>view_sidebar</mat-icon>
-        </button>
-        <button
-          mat-icon-button
-          aria-label="Example icon-button with heart icon"
-        >
-          <mat-icon>search</mat-icon>
-        </button>
-        <button
-          mat-icon-button
-          aria-label="Example icon-button with share icon"
-        >
-          <mat-icon>zoom_out_map</mat-icon>
-        </button>
-        <button
-          mat-icon-button
-          aria-label="Example icon-button with share icon"
-        >
-          <mat-icon>bookmark_border</mat-icon>
-        </button>
-        <button
-          mat-icon-button
-          aria-label="Example icon-button with share icon"
-        >
-          <mat-icon>folder_open</mat-icon>
-          <app-badge
-            content="7"
-            size="medium"
-            className="text-white right-[4px] top-[10px] bg-custom-primary-400"
-          ></app-badge>
-        </button>
-      </div>
-    </mat-toolbar>
-
+    <app-home-header (onToggleLeftSideNav)="leftSideNav.toggle()">
+    </app-home-header>
     <button
       mat-button
       class="fixed z-50 hover:cursor-pointer top-[250px] right-[40px] bg-red-600 pl-0 text-white rounded-l-2xl"

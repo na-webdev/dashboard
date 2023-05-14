@@ -70,3 +70,11 @@ export const staticUiNavigationGroups: NavigationGroupI[] = [
     ],
   },
 ];
+
+export const headerButtonIcons = [
+  'view_sidebar',
+  'search',
+  'zoom_out_map',
+  'bookmark_border',
+  'folder_open',
+];

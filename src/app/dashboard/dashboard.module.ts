@@ -14,6 +14,7 @@ import {
   RightSidenavComponent,
   StatisticBoardsComponent,
 } from '@dashboard/components';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {
     ProjectComponent,
     StatisticBoardsComponent,
     ProjectHeroComponent,
+    HomeHeaderComponent,
   ],
   imports: [DashboardRoutingModule, SharedModule],
 })

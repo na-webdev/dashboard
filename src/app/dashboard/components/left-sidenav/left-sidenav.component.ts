@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { staticUiNavigationGroups, staticUiUserData } from '@dashboard/data';
 import { NavigationGroupI, UserDataI } from '@dashboard/interfaces';
+import { UiDataService } from '@dashboard/services/ui-data.service';
 
 @Component({
   selector: 'app-left-sidenav',
@@ -8,6 +8,11 @@ import { NavigationGroupI, UserDataI } from '@dashboard/interfaces';
   styleUrls: ['./left-sidenav.component.scss'],
 })
 export class LeftSidenavComponent {
-  userData: UserDataI = staticUiUserData;
-  navigationGroups: NavigationGroupI[] = staticUiNavigationGroups;
+  userData: UserDataI;
+  navigationGroups: NavigationGroupI[];
+
+  constructor(private uiDataService: UiDataService) {
+    this.userData = this.uiDataService.getUserData();
+    this.navigationGroups = this.uiDataService.getLeftNavUrlGroups();
+  }
 }

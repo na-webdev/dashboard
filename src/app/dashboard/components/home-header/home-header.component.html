@@ -1,0 +1,19 @@
+<mat-toolbar class="sticky top-0 z-50 flex justify-between bg-white shadow-sm">
+  <button (click)="onToggleLeftSideNav.emit()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div>
+    <button
+      mat-icon-button
+      *ngFor="let icon of headerButtonIcons; let lastIcon = last"
+    >
+      <mat-icon>{{ icon }}</mat-icon>
+      <app-badge
+        *ngIf="lastIcon"
+        content="7"
+        size="medium"
+        className="text-white right-[4px] top-[10px] bg-custom-primary-400"
+      ></app-badge>
+    </button>
+  </div>
+</mat-toolbar>
